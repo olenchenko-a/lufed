@@ -1,0 +1,17 @@
+<section class="top">
+    <div class="container">
+        <div class="row">
+          <div class="col-12 text-center">
+            <h1 class="has-under-line">{header->f:format.htmlentitiesDecode()}</h1>
+            {description->f:format.htmlentitiesDecode()}
+          </div>
+        </div>
+        <f:if condition="{link}">
+            <div class="row">
+                <div class="col-12 d-flex justify-content-center">
+                    <a class="btn" href="{f:uri.typolink(parameter:link)}">{label}</a>
+                </div>
+            </div>
+        </f:if>
+    </div>
+</section>

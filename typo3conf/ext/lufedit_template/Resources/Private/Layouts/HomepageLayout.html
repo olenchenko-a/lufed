@@ -1,0 +1,20 @@
+<html data-namespace-typo3-fluid="true"
+      xmlns="http://www.w3.org/1999/xhtml" lang="en"
+      xmlns:flux="http://typo3.org/ns/FluidTYPO3/Flux/ViewHelpers"
+      xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers"
+      xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
+      xmlns:lufedit="http://typo3.org/ns/Lufedit/LufeditTemplate/ViewHelpers"
+      flux:schemaLocation="http://lufed-it.de/_typo3/scheme/flux/flux-8.1.0.xsd"
+      f:schemaLocation="http://lufed-it.de/_typo3/scheme/fluid/fluid-7.6.0.xsd"
+      v:schemaLocation="http://lufed-it.de/_typo3/scheme/vhs/vhs-4.2.0.xsd">
+
+    <f:render partial="Head" arguments="{_all}"/>
+    <!--TYPO3SEARCH_begin-->
+
+        <f:render partial="Header" arguments="{_all}"/>
+        <f:render partial="HomeBaner" arguments="{_all}"/>
+        <v:content.render column="0" />
+        <f:render partial="Footer" arguments="{_all}"/>
+
+    <!--TYPO3SEARCH_end-->
+</html>

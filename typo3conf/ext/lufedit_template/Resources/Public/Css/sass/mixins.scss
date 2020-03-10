@@ -1,0 +1,30 @@
+@function toRem($size) {
+  $remSize: $size / 16px;
+  @return #{$remSize}rem;
+}
+
+/*  sm 48em
+  md 62em
+  lg 82em
+  */
+
+  @mixin sm {
+   @media (min-width: 48em) {
+     @content;
+   }
+ }
+
+ // Medium devices
+ @mixin md {
+   @media (min-width: 62em) {
+     @content;
+   }
+ }
+
+ // Large devices
+ @mixin lg {
+   @media (min-width: 82em) {
+     @content;
+   }
+ }
+ 

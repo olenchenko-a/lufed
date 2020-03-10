@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+    <meta type="array">
+        <type>module</type>
+        <description>Language labels for the bitform extension in the FRONTEND</description>
+    </meta>
+    <data type="array">
+        <languageKey index="default" type="array">
+            <label index="flux.layout_page">Page</label>
+            <label index="flux.layout_page-full-width">Homepage</label>
+           
+            <label index="flux.layout_page-full-width.fields.header">Baner header</label>
+            <label index="flux.layout_page-full-width.fields.label">Link label</label>
+            <label index="flux.layout_page-full-width.fields.link">Link</label>
+            <label index="flux.layout_page-full-width.fields.background">Baner background</label>
+            <label index="flux.layout_page-full-width.fields.description">Baner text</label>
+
+
+            <label index="flux.Sections">Sections</label>
+
+            <label index="flux.SectionTop">Top section</label>
+            <label index="flux.SectionTop.fields.header">Header</label>
+            <label index="flux.SectionTop.sheets.optContentLeft">Left Side</label>
+            <label index="flux.SectionTop.sheets.optContentRight">Right Side</label>
+            <label index="flux.SectionTop.sections.icons">Icons</label>
+            <label index="flux.SectionTop.objects.iconItem">Item</label>
+            <label index="flux.SectionTop.objects.iconItem.class">Class</label>
+            <label index="flux.SectionTop.objects.iconItem.text">Text</label>
+            <label index="flux.SectionTop.fields.rightContent">Content</label>
+
+            <label index="flux.SectionService">Services section</label>
+            <label index="flux.SectionService.fields.header">Header</label>
+            <label index="flux.SectionService.fields.topText">Text</label>
+            <label index="flux.SectionService.fields.bottomText">Bottom text</label>
+            <label index="flux.SectionService.fields.blockMinorUpdates.blockHeader">Minor updates header</label>
+            <label index="flux.SectionService.fields.blockMinorUpdates.blockText">Minor updates text</label>
+            <label index="flux.SectionService.fields.blockMajorUpdates.blockHeader">Minor updates header</label>
+            <label index="flux.SectionService.fields.blockMajorUpdates.blockText">Minor updates text</label>
+            <label index="flux.SectionService.fields.blockRelaunch.blockHeader">Minor updates header</label>
+            <label index="flux.SectionService.fields.blockRelaunch.blockText">Minor updates text</label>
+
+            <label index="flux.SectionRisks">Risks section</label>
+            <label index="flux.SectionRisks.fields.header">Header section</label>
+            <label index="flux.SectionRisks.fields.blockHeader-1">Header 1</label>
+            <label index="flux.SectionRisks.fields.blockText-1">Text 1</label>
+            <label index="flux.SectionRisks.fields.blockHeader-2">Header 2</label>
+            <label index="flux.SectionRisks.fields.blockText-2">Text 2</label>
+            <label index="flux.SectionRisks.fields.blockHeader-3">Header 3</label>
+            <label index="flux.SectionRisks.fields.blockText-3">Text 3</label>
+            <label index="flux.SectionRisks.fields.blockHeader-4">Header 4</label>
+            <label index="flux.SectionRisks.fields.blockText-4">Text 4</label>
+
+            <label index="flux.SectionAdvantages">Advantages section</label>
+            <label index="flux.SectionAdvantages.fields.header">Header</label>
+            <label index="flux.SectionAdvantages.fields.blockHeader-1">Text</label>
+            <label index="flux.SectionAdvantages.fields.class-1">Class</label>
+            <label index="flux.SectionAdvantages.fields.blockHeader-2">Text</label>
+            <label index="flux.SectionAdvantages.fields.class-2">Class</label>
+            <label index="flux.SectionAdvantages.fields.blockHeader-3">Text</label>
+            <label index="flux.SectionAdvantages.fields.class-3">Class</label>
+            <label index="flux.SectionAdvantages.fields.blockHeader-4">Text</label>
+            <label index="flux.SectionAdvantages.fields.class-4">Class</label>
+
+            <label index="flux.SectionClients">Clients section</label>
+            <label index="flux.SectionClients.fields.header">Header</label>
+            <label index="flux.SectionClients.sections.logos">Images</label>
+            <label index="flux.SectionClients.objects.logo">Image</label>
+
+            <label index="flux.SectionTeam">Team section</label>
+            <label index="flux.SectionTeam.fields.developersNum">Number of developers</label>
+            <label index="flux.SectionTeam.fields.developersText">Text for developers</label>
+            <label index="flux.SectionTeam.fields.projectsNum">Number of projects</label>
+            <label index="flux.SectionTeam.fields.projectsText">Text for projects</label>
+            <label index="flux.SectionTeam.fields.yearsNum">Years</label>
+            <label index="flux.SectionTeam.fields.yearsText">Text for years</label>
+
+            <label index="flux.SectionUpdate">Update section</label>
+            <label index="flux.SectionUpdate.fields.text">Text</label>
+
+            <label index="flux.SectionContact">Contact section</label>
+            <label index="flux.SectionContact.fields.header">Header</label>
+            <label index="flux.SectionContact.fields.phone">Phone</label>
+            <label index="flux.SectionContact.fields.mail">Email</label>
+
+            <label index="flux.Menu">Menu</label>
+            <label index="flux.Menu.objects.items">Links</label>
+            <label index="flux.Menu.objects.item">Link</label>
+            <label index="flux.Menu.objects.item.label">Label</label>
+            <label index="flux.Menu.objects.item.link">Link</label>
+
+        </languageKey>
+    </data>
+</T3locallang>

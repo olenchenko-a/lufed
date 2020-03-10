@@ -1,0 +1,15 @@
+<v:page.header.title title="{record.title}"  />
+
+<v:variable.set name="templatePath" value="{v:extension.path.resources(extensionName: 'lufedit_template')}" />
+
+<v:page.header.meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0. maximum-scale=1, minimum-scale=0" />
+
+<v:asset.style path = "{templatePath}Css/stylesheet/style.css" />
+<v:asset.style path = "{templatePath}Css/stylesheet/quick.css" />
+<v:asset.style path = "{templatePath}Js/fancybox/dist/jquery.fancybox.min.css" />
+<v:asset.script path="{templatePath}Js/jquery.min.js" movable="1" overwrite="1" standalone="1" trim="1"/>
+
+<f:comment>
+<v:asset.style path = "fileadmin/template/cookie/cookieconsent.min.css" />
+<v:asset.style path = "fileadmin/template/cookie/cookieconsent.css" />
+</f:comment>
