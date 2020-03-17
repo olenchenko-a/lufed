@@ -45,6 +45,7 @@ class ContentTypeProvider
 
     public function getForm(array $row)
     {
+
         $objectManager = GeneralUtility::makeInstance(ObjectManager::class);
         $contentType = $objectManager->get(RecordBasedContentTypeDefinition::class, $row);
         if (!$contentType) {

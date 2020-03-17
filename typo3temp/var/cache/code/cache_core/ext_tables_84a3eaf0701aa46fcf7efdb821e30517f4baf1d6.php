@@ -902,33 +902,6 @@ defined('TYPO3_MODE') or die();
 );
 
 /**
- * Extension: fluidcontent
- * File: D:/OSPanel/domains/lufed/typo3conf/ext/fluidcontent/ext_tables.php
- */
-
-$_EXTKEY = 'fluidcontent';
-$_EXTCONF = $GLOBALS['TYPO3_CONF_VARS']['EXT']['extConf'][$_EXTKEY] ?? null;
-
-
-if (!defined('TYPO3_MODE')) {
-    die ('Access denied.');
-}
-
-if (!(TYPO3_REQUESTTYPE & TYPO3_REQUESTTYPE_INSTALL)) {
-    \FluidTYPO3\Flux\Core::registerConfigurationProvider('FluidTYPO3\Fluidcontent\Provider\ContentProvider');
-
-    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPlugin(
-        [
-            'Fluid Content',
-            'fluidcontent_content',
-            'EXT:fluidcontent/Resources/Public/Icons/Plugin.svg',
-        ],
-        \TYPO3\CMS\Extbase\Utility\ExtensionUtility::PLUGIN_TYPE_CONTENT_ELEMENT,
-        'FluidTYPO3.Fluidcontent'
-    );
-}
-
-/**
  * Extension: lufedit_template
  * File: D:/OSPanel/domains/lufed/typo3conf/ext/lufedit_template/ext_tables.php
  */

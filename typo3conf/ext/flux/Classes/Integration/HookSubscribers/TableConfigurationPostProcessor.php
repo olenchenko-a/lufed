@@ -70,6 +70,8 @@ class TableConfigurationPostProcessor implements TableConfigurationPostProcessin
      */
     public static function spoolQueuedContentTypeTableConfigurations(array $queue)
     {
+        // print_r($queue);
+        // exit;
         $contentTypeBuilder = GeneralUtility::makeInstance(ContentTypeBuilder::class);
         foreach ($queue as $queuedRegistration) {
             list ($providerExtensionName, $templatePathAndFilename, , $contentType) = $queuedRegistration;
@@ -105,6 +107,7 @@ class TableConfigurationPostProcessor implements TableConfigurationPostProcessin
             list ($providerExtensionName, $templateFilename, $providerClassName, $contentType, $pluginName, $controllerActionName) = $queuedRegistration;
             try {
                 $contentType = $contentType ?: static::determineContentType($providerExtensionName, $templateFilename);
+
                 $defaultControllerExtensionName = 'FluidTYPO3.Flux';
                 $provider = $contentTypeBuilder->configureContentTypeFromTemplateFile(
                     $providerExtensionName,
@@ -118,6 +121,7 @@ class TableConfigurationPostProcessor implements TableConfigurationPostProcessin
                 Core::registerConfigurationProvider($provider);
 
                 $pluginName = $pluginName ?: GeneralUtility::underscoredToUpperCamelCase(end(explode('_', $contentType, 2)));
+
                 $contentTypeBuilder->registerContentType($providerExtensionName, $contentType, $provider, $pluginName);
 
             } catch (Exception $error) {

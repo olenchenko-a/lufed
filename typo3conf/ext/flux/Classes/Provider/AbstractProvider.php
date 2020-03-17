@@ -276,6 +276,11 @@ class AbstractProvider implements ProviderInterface
      */
     public function getForm(array $row)
     {
+        
+        // if($row['CType'] == 'lufedittemplate_test'){
+        //     var_dump($this->extractConfiguration($row, 'form', true));
+        //     exit;
+        // }
         return $this->form ?? $this->createCustomFormInstance($row) ?? $this->extractConfiguration($row, 'form');
     }
 
@@ -363,8 +368,9 @@ class AbstractProvider implements ProviderInterface
      * @param string|null $name
      * @return mixed|null
      */
-    protected function extractConfiguration(array $row, $name = null)
+    protected function extractConfiguration(array $row, $name = null, $test = false)
     {
+        
         $cacheKeyAll = $this->getCacheKeyForStoredVariable($row, '_all');
         $allCached = $this->configurationService->getFromCaches($cacheKeyAll);
         $fromCache = $allCached[$name] ?? null;
@@ -376,7 +382,13 @@ class AbstractProvider implements ProviderInterface
         $view = $this->getViewForRecord($row);
 
         if ($configurationSectionName) {
-            $view->renderSection($configurationSectionName, $viewVariables, false);
+
+            // $view->renderSection($configurationSectionName, $viewVariables, false, true);
+            if($test){
+                $view->renderSection($configurationSectionName, $viewVariables, false, true);
+            } else {
+                $view->renderSection($configurationSectionName, $viewVariables, false);
+            }
         } else {
             $view->assignMultiple($viewVariables);
             $view->render();
@@ -483,6 +495,10 @@ class AbstractProvider implements ProviderInterface
                 'record' => $row
             ]
         )['template'];
+    }
+
+    public function getTemplateLF(){
+        return $this->templatePathAndFilename;
     }
 
     /**
@@ -1012,7 +1028,7 @@ class AbstractProvider implements ProviderInterface
      * @return ProviderInterface
      */
     public function setTemplatePathAndFilename($templatePathAndFilename)
-    {
+    {        error_log("222:".$templatePathAndFilename);
         $this->templatePathAndFilename = $templatePathAndFilename;
         return $this;
     }

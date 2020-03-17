@@ -70,6 +70,7 @@ class ContentTypeBuilder
 
         /** @var Provider $provider */
         $provider = GeneralUtility::makeInstance(ObjectManager::class)->get($providerClassName);
+
         if (
             !$provider instanceof RecordProviderInterface
             || !$provider instanceof ControllerProviderInterface
@@ -83,11 +84,15 @@ class ContentTypeBuilder
                 )
             );
         }
+
         $provider->setFieldName('pi_flexform');
         $provider->setTableName('tt_content');
         $provider->setExtensionKey($providerExtensionName);
         $provider->setControllerName($controllerName);
         $provider->setControllerAction($emulatedControllerAction);
+
+        $templateFilename = str_replace("\\", "/", $templateFilename);
+        
         $provider->setTemplatePathAndFilename($templateFilename);
         $provider->setContentObjectType($fullContentType);
         $provider->setConfigurationSectionName($section);
@@ -159,17 +164,25 @@ class ContentTypeBuilder
         $cacheId = 'CType_' . md5($contentType . '__' . $providerExtensionName . '__' . $pluginName);
         $cache = $this->getCache();
         $form = $cache->get($cacheId);
+
         if (!$form) {
+
             // Provider *must* be able to return a Form without any global configuration or specific content
             // record being passed to it. We test this now to fail early if any errors happen during Form fetching.
+
+
             $form = $provider->getForm(['CType' => $contentType]);
+
             if (!$form) {
+
                 return;
             }
             try {
+
                 $form->setExtensionName($providerExtensionName);
                 $cache->set($cacheId, $form);
             } catch (\Exception $error) {
+
                 // Possible serialization error!
                 // Unfortunately we must do pokemon-style exception catching since serialization
                 // errors use the most base Exception class in PHP. So instead we check for a
@@ -182,6 +195,8 @@ class ContentTypeBuilder
         }
 
         $this->registerExtbasePluginForForm($providerExtensionName, GeneralUtility::underscoredToUpperCamelCase(end(explode('_', $contentType, 2))), $form);
+        
+
         $this->addPageTsConfig($form, $contentType);
 
         // Flush the cache entry that was generated; make sure any TypoScript overrides will take place once

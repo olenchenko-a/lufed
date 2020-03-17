@@ -5,7 +5,6 @@
 $typo3InstallDir = \TYPO3\CMS\Core\Core\Environment::getPublicPath() . '/';
 
 return array(
-    'FluidTYPO3\\Fluidcontent\\' => array($typo3InstallDir . 'typo3conf/ext/fluidcontent/Classes'),
     'FluidTYPO3\\Flux\\' => array($typo3InstallDir . 'typo3conf/ext/flux/Classes'),
     'FluidTYPO3\\Vhs\\' => array($typo3InstallDir . 'typo3conf/ext/vhs/Classes'),
     'In2code\\Powermail\\' => array($typo3InstallDir . 'typo3conf/ext/powermail/Classes'),

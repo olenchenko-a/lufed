@@ -100,6 +100,7 @@ abstract class AbstractTemplateView extends TemplateView implements \TYPO3\CMS\E
      */
     public function setTemplatePathAndFilename($templatePathAndFilename)
     {
+        error_log("555:" . $templatePathAndFilename);
         $this->baseRenderingContext->getTemplatePaths()->setTemplatePathAndFilename($templatePathAndFilename);
     }
 

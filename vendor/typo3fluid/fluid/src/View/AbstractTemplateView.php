@@ -214,10 +214,10 @@ abstract class AbstractTemplateView extends AbstractView
      * @return string rendered template for the section
      * @throws InvalidSectionException
      */
-    public function renderSection($sectionName, array $variables = [], $ignoreUnknown = false)
+    public function renderSection($sectionName, array $variables = [], $ignoreUnknown = false, $test = false)
     {
         $renderingContext = $this->getCurrentRenderingContext();
-
+        
         if ($this->getCurrentRenderingType() === self::RENDERING_LAYOUT) {
             // in case we render a layout right now, we will render a section inside a TEMPLATE.
             $renderingTypeOnNextLevel = self::RENDERING_TEMPLATE;
@@ -228,7 +228,11 @@ abstract class AbstractTemplateView extends AbstractView
         }
 
         try {
+            if($test){
+            error_log("parse");
+            }
             $parsedTemplate = $this->getCurrentParsedTemplate();
+            
         } catch (PassthroughSourceException $error) {
             return $error->getSource();
         } catch (InvalidTemplateResourceException $error) {
@@ -246,6 +250,7 @@ abstract class AbstractTemplateView extends AbstractView
         }
 
         if ($parsedTemplate->isCompiled()) {
+           
             $methodNameOfSection = 'section_' . sha1($sectionName);
             if (!method_exists($parsedTemplate, $methodNameOfSection)) {
                 if ($ignoreUnknown) {
@@ -256,9 +261,12 @@ abstract class AbstractTemplateView extends AbstractView
                     );
                 }
             }
+            
             $this->startRendering($renderingTypeOnNextLevel, $parsedTemplate, $renderingContext);
+             
             $output = $parsedTemplate->$methodNameOfSection($renderingContext);
             $this->stopRendering();
+            
         } else {
             $sections = $parsedTemplate->getVariableContainer()->get('1457379500_sections');
             if (!isset($sections[$sectionName])) {
@@ -269,6 +277,7 @@ abstract class AbstractTemplateView extends AbstractView
                     new InvalidSectionException('Section "' . $sectionName . '" does not exist.')
                 );
             }
+            
             /** @var $section ViewHelperNode */
             $section = $sections[$sectionName];
 
@@ -375,12 +384,14 @@ abstract class AbstractTemplateView extends AbstractView
      */
     protected function getCurrentParsedTemplate()
     {
+
         $currentRendering = end($this->renderingStack);
         $renderingContext = $this->getCurrentRenderingContext();
         $parsedTemplate = !empty($currentRendering['parsedTemplate']) ? $currentRendering['parsedTemplate'] : $renderingContext->getTemplateCompiler()->getCurrentlyProcessingState();
         if ($parsedTemplate) {
             return $parsedTemplate;
         }
+
         $templatePaths = $renderingContext->getTemplatePaths();
         $templateParser = $renderingContext->getTemplateParser();
         $controllerName = $renderingContext->getControllerName();
@@ -388,12 +399,14 @@ abstract class AbstractTemplateView extends AbstractView
         $parsedTemplate = $templateParser->getOrParseAndStoreTemplate(
             $templatePaths->getTemplateIdentifier($controllerName, $actionName),
             function($parent, TemplatePaths $paths) use ($controllerName, $actionName, $renderingContext) {
+                error_log(": " . $controllerName . " " . $actionName);
                 return $paths->getTemplateSource($controllerName, $actionName);
             }
         );
         if ($parsedTemplate->isCompiled()) {
             $parsedTemplate->addCompiledNamespaces($this->baseRenderingContext);
         }
+
         return $parsedTemplate;
     }
 

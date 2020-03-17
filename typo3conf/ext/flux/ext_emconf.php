@@ -3,7 +3,7 @@
 /***************************************************************
  * Extension Manager/Repository config file for ext "flux".
  *
- * Auto generated 10-03-2020 11:32
+ * Auto generated 11-03-2020 18:21
  *
  * Manual updates:
  * Only the data in the array - everything else is removed by next

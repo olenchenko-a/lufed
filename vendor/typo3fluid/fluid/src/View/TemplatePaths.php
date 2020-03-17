@@ -136,7 +136,7 @@ class TemplatePaths
      * @return void
      */
     public function setTemplatePathAndFilename($templatePathAndFilename)
-    {
+    {error_log("444" . $templatePathAndFilename);
         $this->templatePathAndFilename = (string) $this->sanitizePath($templatePathAndFilename);
     }
 
@@ -251,6 +251,7 @@ class TemplatePaths
      */
     public function resolveTemplateFileForControllerAndActionAndFormat($controller, $action, $format = null)
     {
+        // error_log("message ".$this->templatePathAndFilename);
         if ($this->templatePathAndFilename !== null) {
             return $this->templatePathAndFilename;
         }
@@ -586,12 +587,14 @@ class TemplatePaths
      */
     public function getTemplateSource($controller = 'Default', $action = 'Default')
     {
+
         if (is_string($this->templateSource)) {
             return $this->templateSource;
         } elseif (is_resource($this->templateSource)) {
             rewind($this->templateSource);
             return $this->templateSource = stream_get_contents($this->templateSource);
         }
+
         $templateReference = $this->resolveTemplateFileForControllerAndActionAndFormat($controller, $action);
         if (!file_exists($templateReference) && $templateReference !== 'php://stdin') {
             $format = $this->getFormat();
@@ -608,6 +611,7 @@ class TemplatePaths
                 1257246929
             );
         }
+
         return file_get_contents($templateReference, FILE_TEXT);
     }
 

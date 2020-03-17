@@ -427,44 +427,12 @@ return array (
             'minitems' => 0,
           ),
         ),
-        'tx_fluidcontent_allowedfluidcontent' => 
-        array (
-          'exclude' => 0,
-          'label' => 'LLL:EXT:fluidcontent/Resources/Private/Language/locallang.xlf:be_groups.tx_fluidcontent_allowedfluidcontent',
-          'config' => 
-          array (
-            'type' => 'select',
-            'renderType' => 'selectCheckBox',
-            'size' => 10,
-            'maxitems' => 99999999,
-            'multiple' => true,
-            'items' => 
-            array (
-            ),
-          ),
-        ),
-        'tx_fluidcontent_deniedfluidcontent' => 
-        array (
-          'exclude' => 0,
-          'label' => 'LLL:EXT:fluidcontent/Resources/Private/Language/locallang.xlf:be_groups.tx_fluidcontent_deniedfluidcontent',
-          'config' => 
-          array (
-            'type' => 'select',
-            'renderType' => 'selectCheckBox',
-            'size' => 10,
-            'maxitems' => 99999999,
-            'multiple' => true,
-            'items' => 
-            array (
-            ),
-          ),
-        ),
       ),
       'types' => 
       array (
         0 => 
         array (
-          'showitem' => '--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,title,subgroup,--div--;LLL:EXT:core/Resources/Private/Language/locallang_tca.xlf:be_groups.tabs.base_rights,groupMods,tables_select,tables_modify,pagetypes_select,tx_fluidcontent_allowedfluidcontent,tx_fluidcontent_deniedfluidcontent,non_exclude_fields,explicit_allowdeny,allowed_languages,custom_options,--div--;LLL:EXT:core/Resources/Private/Language/locallang_tca.xlf:be_groups.tabs.mounts_and_workspaces,workspace_perms,db_mountpoints,file_mountpoints,file_permissions,category_perms,--div--;LLL:EXT:core/Resources/Private/Language/locallang_tca.xlf:be_groups.tabs.options,lockToDomain,TSconfig,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access,hidden,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:notes,description,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:extended',
+          'showitem' => '--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,title,subgroup,--div--;LLL:EXT:core/Resources/Private/Language/locallang_tca.xlf:be_groups.tabs.base_rights,groupMods,tables_select,tables_modify,pagetypes_select,non_exclude_fields,explicit_allowdeny,allowed_languages,custom_options,--div--;LLL:EXT:core/Resources/Private/Language/locallang_tca.xlf:be_groups.tabs.mounts_and_workspaces,workspace_perms,db_mountpoints,file_mountpoints,file_permissions,category_perms,--div--;LLL:EXT:core/Resources/Private/Language/locallang_tca.xlf:be_groups.tabs.options,lockToDomain,TSconfig,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access,hidden,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:notes,description,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:extended',
         ),
       ),
     ),
@@ -8674,7 +8642,7 @@ return array (
         'hideAtCopy' => true,
         'prependAtCopy' => 'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.prependAtCopy',
         'copyAfterDuplFields' => 'colPos,sys_language_uid',
-        'useColumnsForDefaultValues' => 'colPos,sys_language_uid,CType,tx_fed_fcefile',
+        'useColumnsForDefaultValues' => 'colPos,sys_language_uid,CType',
         'shadowColumnsForNewPlaceholders' => 'colPos',
         'transOrigPointerField' => 'l18n_parent',
         'transOrigDiffSourceField' => 'l18n_diffsource',
@@ -10677,26 +10645,6 @@ return array (
             'type' => 'passthrough',
           ),
         ),
-        'tx_fed_fcefile' => 
-        array (
-          'exclude' => 1,
-          'label' => 'LLL:EXT:fluidcontent/Resources/Private/Language/locallang.xlf:tt_content.tx_fed_fcefile',
-          'displayCond' => 'FIELD:CType:=:fluidcontent_content',
-          'config' => 
-          array (
-            'type' => 'select',
-            'renderType' => 'selectSingle',
-            'items' => 
-            array (
-              0 => 
-              array (
-                0 => 'LLL:EXT:fluidcontent/Resources/Private/Language/locallang.xlf:tt_content.tx_fed_fcefile',
-                1 => '',
-              ),
-            ),
-          ),
-          'onChange' => 'reload',
-        ),
         't3_origuid' => 
         array (
           'config' => 
@@ -10928,9 +10876,17 @@ return array (
         array (
           'showitem' => '--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,--palette--;;general,--palette--;;headers,pi_flexform,--div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.appearance,--palette--;;frames,--palette--;;appearanceLinks,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:language,--palette--;;language,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access,--palette--;;hidden,--palette--;;access,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:categories,categories,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:notes,rowDescription,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:extended',
         ),
-        'fluidcontent_content' => 
+        'lufedittemplate_test' => 
         array (
-          'showitem' => '--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.general;general,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.header;header,pi_flexform,--div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.appearance,layout;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:layout_formlabel,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.frames;frames,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.appearanceLinks;appearanceLinks,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:;visibility,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf::palette.access;access,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:categories,categories,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:extended,--div--;LLL:EXT:flux/Resources/Private/Language/locallang.xlf:tt_content.tabs.relation,tx_flux_parent,tx_flux_column,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:language,--palette--;;language,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:notes,rowDescription',
+          'showitem' => '--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.general;general,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.headers;headers,pi_flexform,--div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.appearance,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.frames;frames,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.appearanceLinks;appearanceLinks,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:language,--palette--;;language,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access,--palette--;;hidden,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.access;access,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:categories,categories,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:notes,rowDescription',
+        ),
+        'flux_standard' => 
+        array (
+          'showitem' => '--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.general;general,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.headers;headers,pi_flexform,--div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.appearance,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.frames;frames,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.appearanceLinks;appearanceLinks,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:language,--palette--;;language,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access,--palette--;;hidden,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.access;access,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:categories,categories,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:notes,rowDescription',
+        ),
+        'flux_standard2' => 
+        array (
+          'showitem' => '--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.general;general,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.headers;headers,pi_flexform,--div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.appearance,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.frames;frames,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.appearanceLinks;appearanceLinks,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:language,--palette--;;language,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access,--palette--;;hidden,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.access;access,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:categories,categories,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:notes,rowDescription',
         ),
       ),
       'palettes' => 
@@ -10938,8 +10894,10 @@ return array (
         'general' => 
         array (
           'label' => 'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.general',
-          'showitem' => 'CType;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:CType_formlabel, tx_fed_fcefile,
-                colPos;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:colPos_formlabel',
+          'showitem' => '
+                CType;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:CType_formlabel,
+                colPos;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:colPos_formlabel,
+            ',
         ),
         'header' => 
         array (
@@ -12200,7 +12158,7 @@ return array (
             'default' => 0,
             'range' => 
             array (
-              'lower' => 1583787600,
+              'lower' => 1584392400,
             ),
           ),
         ),
@@ -12219,7 +12177,7 @@ return array (
             'default' => 0,
             'range' => 
             array (
-              'lower' => 1583787600,
+              'lower' => 1584392400,
             ),
           ),
         ),
@@ -12569,7 +12527,7 @@ return array (
             'default' => 0,
             'range' => 
             array (
-              'lower' => 1583787600,
+              'lower' => 1584392400,
             ),
           ),
         ),
@@ -12588,7 +12546,7 @@ return array (
             'default' => 0,
             'range' => 
             array (
-              'lower' => 1583787600,
+              'lower' => 1584392400,
             ),
           ),
         ),
@@ -13318,7 +13276,7 @@ return array (
             'default' => 0,
             'range' => 
             array (
-              'lower' => 1583787600,
+              'lower' => 1584392400,
             ),
           ),
         ),
@@ -13337,7 +13295,7 @@ return array (
             'default' => 0,
             'range' => 
             array (
-              'lower' => 1583787600,
+              'lower' => 1584392400,
             ),
           ),
         ),
@@ -13576,7 +13534,7 @@ return array (
             'default' => 0,
             'range' => 
             array (
-              'lower' => 1583787600,
+              'lower' => 1584392400,
             ),
           ),
         ),
@@ -13595,7 +13553,7 @@ return array (
             'default' => 0,
             'range' => 
             array (
-              'lower' => 1583787600,
+              'lower' => 1584392400,
             ),
           ),
         ),
@@ -14028,7 +13986,7 @@ return array (
             'default' => 0,
             'range' => 
             array (
-              'lower' => 1583787600,
+              'lower' => 1584392400,
             ),
           ),
         ),
@@ -14047,7 +14005,7 @@ return array (
             'default' => 0,
             'range' => 
             array (
-              'lower' => 1583787600,
+              'lower' => 1584392400,
             ),
           ),
         ),

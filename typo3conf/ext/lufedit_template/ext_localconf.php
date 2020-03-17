@@ -8,7 +8,7 @@ use FluidTYPO3\Flux\Core;
 
 call_user_func(function($_EXTKEY){
 
-    // Core::registerProviderExtensionKey('Lufedit.LufeditTemplate', 'Content');  
+    Core::registerProviderExtensionKey('Lufedit.LufeditTemplate', 'Content');  
     Core::registerProviderExtensionKey('Lufedit.LufeditTemplate', 'Page');
 
     // rte_image support

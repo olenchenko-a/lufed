@@ -123,6 +123,7 @@ class Core
                     . '_'
                     . strtolower(substr(str_replace(DIRECTORY_SEPARATOR, '', $file->getRelativePathname()), 0, -5));
                 static::registerTemplateAsContentType($extensionKey, $file->getPathname(), $contentTypeName);
+
                 $contentTypeManager->registerTypeName($contentTypeName);
             }
         }
@@ -139,6 +140,7 @@ class Core
                 ]
             );
             array_push(static::$extensions[$overrides['providesControllerName']], $overrides['extensionKey']);
+
         }
     }
 
@@ -319,9 +321,15 @@ class Core
         $providerClassName = Provider::class,
         $pluginName = null
     ) {
-        if ($templateFilename[0] !== DIRECTORY_SEPARATOR) {
-            $templateFilename = GeneralUtility::getFileAbsFileName($templateFilename);
+        // hack for windows otherwise return empty string
+        if (strtoupper(substr(PHP_OS, 0, 3)) !== 'WIN') {
+            if ($templateFilename[0] !== DIRECTORY_SEPARATOR) {
+                $templateFilename = GeneralUtility::getFileAbsFileName($templateFilename);
+            }
         }
+        // if ($templateFilename[0] !== DIRECTORY_SEPARATOR) {
+        //     $templateFilename = GeneralUtility::getFileAbsFileName($templateFilename);
+        // }
 
         static::$queuedContentTypeRegistrations[] = [
             $providerExtensionName,
@@ -330,6 +338,9 @@ class Core
             $contentTypeName,
             $pluginName
         ];
+
+        error_log(serialize(static::$queuedContentTypeRegistrations));
+
     }
 
     /**

@@ -5,17 +5,6 @@
 $typo3InstallDir = \TYPO3\CMS\Core\Core\Environment::getPublicPath() . '/';
 
 return array(
-    'FluidTYPO3\\Fluidcontent\\Backend\\ContentTypeFilter' => $typo3InstallDir . 'typo3conf/ext/fluidcontent/Classes/Backend/ContentTypeFilter.php',
-    'FluidTYPO3\\Fluidcontent\\Backend\\TableConfigurationPostProcessor' => $typo3InstallDir . 'typo3conf/ext/fluidcontent/Classes/Backend/TableConfigurationPostProcessor.php',
-    'FluidTYPO3\\Fluidcontent\\Controller\\AbstractContentController' => $typo3InstallDir . 'typo3conf/ext/fluidcontent/Classes/Controller/AbstractContentController.php',
-    'FluidTYPO3\\Fluidcontent\\Controller\\ContentController' => $typo3InstallDir . 'typo3conf/ext/fluidcontent/Classes/Controller/ContentController.php',
-    'FluidTYPO3\\Fluidcontent\\Controller\\ContentControllerInterface' => $typo3InstallDir . 'typo3conf/ext/fluidcontent/Classes/Controller/ContentControllerInterface.php',
-    'FluidTYPO3\\Fluidcontent\\Hooks\\ContentIconUserFunction' => $typo3InstallDir . 'typo3conf/ext/fluidcontent/Classes/Hooks/ContentIconUserFunction.php',
-    'FluidTYPO3\\Fluidcontent\\Hooks\\GroupAccessListPostProcessor' => $typo3InstallDir . 'typo3conf/ext/fluidcontent/Classes/Hooks/GroupAccessListPostProcessor.php',
-    'FluidTYPO3\\Fluidcontent\\Hooks\\WizardItemsHookSubscriber' => $typo3InstallDir . 'typo3conf/ext/fluidcontent/Classes/Hooks/WizardItemsHookSubscriber.php',
-    'FluidTYPO3\\Fluidcontent\\Provider\\BackendUserGroupProvider' => $typo3InstallDir . 'typo3conf/ext/fluidcontent/Classes/Provider/BackendUserGroupProvider.php',
-    'FluidTYPO3\\Fluidcontent\\Provider\\ContentProvider' => $typo3InstallDir . 'typo3conf/ext/fluidcontent/Classes/Provider/ContentProvider.php',
-    'FluidTYPO3\\Fluidcontent\\Service\\ConfigurationService' => $typo3InstallDir . 'typo3conf/ext/fluidcontent/Classes/Service/ConfigurationService.php',
     'FluidTYPO3\\Flux\\Backend\\BackendLayoutDataProvider' => $typo3InstallDir . 'typo3conf/ext/flux/Classes/Backend/BackendLayoutDataProvider.php',
     'FluidTYPO3\\Flux\\Backend\\PageLayoutDataProvider' => $typo3InstallDir . 'typo3conf/ext/flux/Classes/Backend/PageLayoutDataProvider.php',
     'FluidTYPO3\\Flux\\Content\\ContentGridForm' => $typo3InstallDir . 'typo3conf/ext/flux/Classes/Content/ContentGridForm.php',
@@ -668,9 +657,4 @@ return array(
     'In2code\\Powermail\\ViewHelpers\\Validation\\PasswordValidationDataAttributeViewHelper' => $typo3InstallDir . 'typo3conf/ext/powermail/Classes/ViewHelpers/Validation/PasswordValidationDataAttributeViewHelper.php',
     'In2code\\Powermail\\ViewHelpers\\Validation\\UploadAttributesViewHelper' => $typo3InstallDir . 'typo3conf/ext/powermail/Classes/ViewHelpers/Validation/UploadAttributesViewHelper.php',
     'In2code\\Powermail\\ViewHelpers\\Validation\\ValidationDataAttributeViewHelper' => $typo3InstallDir . 'typo3conf/ext/powermail/Classes/ViewHelpers/Validation/ValidationDataAttributeViewHelper.php',
-    'Lufedit\\Bitform\\Domain\\Model\\Companies' => $typo3InstallDir . 'typo3conf/ext/lufedit_template/Classes/Domain/Model/Companies.php',
-    'Lufedit\\Bitform\\Domain\\Model\\Firms' => $typo3InstallDir . 'typo3conf/ext/lufedit_template/Classes/Domain/Model/Firms.php',
-    'Lufedit\\Bitform\\Domain\\Model\\Packets' => $typo3InstallDir . 'typo3conf/ext/lufedit_template/Classes/Domain/Model/Packets.php',
-    'Lufedit\\Bitform\\Domain\\Repository\\CompaniesRepository' => $typo3InstallDir . 'typo3conf/ext/lufedit_template/Classes/Domain/Repository/CompaniesRepository.php',
-    'Lufedit\\Bitform\\Domain\\Repository\\FirmsRepository' => $typo3InstallDir . 'typo3conf/ext/lufedit_template/Classes/Domain/Repository/FirmsRepository.php',
 );

@@ -1,0 +1,3 @@
+<?php
+{"main":{"base":"\/","baseVariants":[],"errorHandling":[],"flux_content_types":"","flux_page_templates":"","languages":[{"title":"Lufed IT","enabled":true,"base":"\/","typo3Language":"de","locale":"de_DE","iso-639-1":"de","navigationTitle":"","hreflang":"","direction":"","flag":"global","languageId":"0"}],"rootPageId":1,"routes":[]}}
+#

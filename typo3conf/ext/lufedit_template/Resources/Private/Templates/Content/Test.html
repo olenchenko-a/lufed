@@ -1,0 +1,49 @@
+<html data-namespace-typo3-fluid="true"
+      xmlns="http://www.w3.org/1999/xhtml" lang="en"
+      xmlns:flux="http://typo3.org/ns/FluidTYPO3/Flux/ViewHelpers"
+      xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers"
+      xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
+      flux:schemaLocation="http://lufed-it.de/_typo3/scheme/flux/flux-8.1.0.xsd"
+      f:schemaLocation="http://lufed-it.de/_typo3/scheme/fluid/fluid-7.6.0.xsd"
+      v:schemaLocation="http://lufed-it.de/_typo3/scheme/vhs/vhs-4.2.0.xsd">
+
+    <f:layout name="LayoutContentElement"/>
+
+    <f:section name="Configuration">
+        <flux:form id="Test" label="Test" options="{group: '{f:translate(key: \'flux.Sections\')}'}"></flux:form>
+
+        <flux:form.sheet name="optContent">
+            <flux:form.section name="items">
+                <flux:form.object name="item">
+                    <flux:field.input name="label" required="1"/>
+                    <flux:field.input name="link" required="1">
+                        <flux:wizard.link activeTab="page"/>
+                    </flux:field.input>
+                </flux:form.object>
+            </flux:form.section>
+        </flux:form.sheet>
+    </f:section>
+        
+    <f:section name="Preview">
+        <f:translate key="flux.Menu" extensionName="LufeditTemplate" />
+    </f:section>
+
+    <f:section name="Main">
+        <ul class="menu">
+            <f:for each="{items}" as="slot">
+                <li><a href="{slot.item.link}">{slot.item.label}</a></li>
+            </f:for>
+        </ul>
+    </f:section>
+
+
+    <f:section name="OriginalIntactHtml">
+        <f:comment>
+            <!--
+                This section used to be used only for development purpose.
+                Some behaviour might not work properly.
+                Please don't change the content.
+            -->
+        </f:comment>
+    </f:section>
+</html>

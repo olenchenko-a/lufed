@@ -92,17 +92,14 @@ return [
         'viewpage' => [
             'packagePath' => 'typo3/sysext/viewpage/',
         ],
-        'flux' => [
-            'packagePath' => 'typo3conf/ext/flux/',
-        ],
-        'fluidcontent' => [
-            'packagePath' => 'typo3conf/ext/fluidcontent/',
-        ],
         'vhs' => [
             'packagePath' => 'typo3conf/ext/vhs/',
         ],
         'lufedit_template' => [
             'packagePath' => 'typo3conf/ext/lufedit_template/',
+        ],
+        'flux' => [
+            'packagePath' => 'typo3conf/ext/flux/',
         ],
         'powermail' => [
             'packagePath' => 'typo3conf/ext/powermail/',
